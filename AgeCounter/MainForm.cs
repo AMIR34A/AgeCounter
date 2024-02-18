@@ -52,22 +52,12 @@ namespace AgeCounter
             else
                 differenceDateTime = birthDate.Subtract(DateTime.Now);
 
-            int year = 0;
-            int days = differenceDateTime.Days;
-            int counter = 0;
-            while (days > 365)
-            {
-                year++;
-                counter++;
-                days -= counter == 4 ? 366 : 365;
-                if (counter == 4)
-                    counter = 0;
-            }
+            int year = differenceDateTime.Days / 365;
 
             CounterModel counterModel = new CounterModel
             {
                 Year = year,
-                Day = days,
+                Day = differenceDateTime.Days - (year * 365),
                 Hour = differenceDateTime.Hours,
                 Minute = differenceDateTime.Minutes,
                 Second = differenceDateTime.Seconds
