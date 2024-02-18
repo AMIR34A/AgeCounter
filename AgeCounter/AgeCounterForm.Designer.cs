@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgeCounterForm));
             AgeCounterLabel = new Label();
             NotifyIcon = new NotifyIcon(components);
-            progressBar1 = new ProgressBar();
+            ProgressBar = new ProgressBar();
             SuspendLayout();
             // 
             // AgeCounterLabel
@@ -53,21 +53,21 @@
             NotifyIcon.Visible = true;
             NotifyIcon.Click += NotifyIcon_Click;
             // 
-            // progressBar1
+            // ProgressBar
             // 
-            progressBar1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            progressBar1.Location = new Point(12, 84);
-            progressBar1.Maximum = 36500;
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(342, 30);
-            progressBar1.TabIndex = 1;
+            ProgressBar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ProgressBar.Location = new Point(12, 84);
+            ProgressBar.Maximum = 36500;
+            ProgressBar.Name = "ProgressBar";
+            ProgressBar.Size = new Size(342, 30);
+            ProgressBar.TabIndex = 1;
             // 
             // AgeCounterForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(366, 126);
-            Controls.Add(progressBar1);
+            Controls.Add(ProgressBar);
             Controls.Add(AgeCounterLabel);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -81,6 +81,6 @@
 
         private Label AgeCounterLabel;
         private NotifyIcon NotifyIcon;
-        private ProgressBar progressBar1;
+        private ProgressBar ProgressBar;
     }
 }
