@@ -106,6 +106,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Main Form";
             ResumeLayout(false);
             PerformLayout();
