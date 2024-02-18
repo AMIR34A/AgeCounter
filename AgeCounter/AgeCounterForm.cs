@@ -1,5 +1,4 @@
 ﻿using AgeCounter.Models;
-using System.Reflection;
 using System.Timers;
 
 namespace AgeCounter;
@@ -73,6 +72,8 @@ public partial class AgeCounterForm : Form
 
     private void NotifyIcon_Click(object sender, EventArgs e)
     {
+        var screen = Screen.PrimaryScreen.WorkingArea;
+        this.Location = new Point((screen.Width - this.Width) / 2, (screen.Height - this.Height) / 2);
         this.ShowInTaskbar = true;
         this.ShowIcon = true;
     }
