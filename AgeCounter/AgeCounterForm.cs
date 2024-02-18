@@ -14,7 +14,7 @@ public partial class AgeCounterForm : Form
         InitializeComponent();
         Counter = counterModel;
         AgeCounterLabel.Text = $"{(Counter.Year < 10 ? "0" + Counter.Year : Counter.Year)}:{(Counter.Day < 10 ? "0" + Counter.Day : Counter.Day)}:{(Counter.Hour < 10 ? "0" + Counter.Hour : Counter.Hour)}:{(Counter.Minute < 10 ? "0" + Counter.Minute : Counter.Minute)}:{(Counter.Second < 10 ? "0" + Counter.Second : Counter.Second)}";
-        progressBar1.Value = (Counter.Year*365)+Counter.Day;
+        ProgressBar.Value = (Counter.Year * 365) + Counter.Day;
         _timer = new System.Timers.Timer();
         _timer.Interval = 1000;
         _timer.Elapsed += Timer_Elapsed;
@@ -40,7 +40,7 @@ public partial class AgeCounterForm : Form
             {
                 Counter.Hour = 0;
                 Counter.Day++;
-                progressBar1.Value++;
+                ProgressBar.Value++;
             }
             if (Counter.Day == 365)
             {
