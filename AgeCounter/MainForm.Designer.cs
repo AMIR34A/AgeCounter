@@ -35,6 +35,7 @@
             TimeMaskedTextBox = new MaskedTextBox();
             TimeLabel = new Label();
             SaveCheckBox = new CheckBox();
+            ResetButton = new Button();
             SuspendLayout();
             // 
             // BirthDateLabel
@@ -92,6 +93,16 @@
             SaveCheckBox.Text = "Save BirthDate";
             SaveCheckBox.UseVisualStyleBackColor = true;
             // 
+            // ResetButton
+            // 
+            ResetButton.Location = new Point(152, 80);
+            ResetButton.Name = "ResetButton";
+            ResetButton.Size = new Size(94, 29);
+            ResetButton.TabIndex = 3;
+            ResetButton.Text = "Reset";
+            ResetButton.UseVisualStyleBackColor = true;
+            ResetButton.Click += StartButton_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -99,6 +110,7 @@
             ClientSize = new Size(358, 115);
             Controls.Add(SaveCheckBox);
             Controls.Add(TimeMaskedTextBox);
+            Controls.Add(ResetButton);
             Controls.Add(StartButton);
             Controls.Add(BirthDateTimePicker);
             Controls.Add(TimeLabel);
@@ -120,5 +132,6 @@
         private MaskedTextBox TimeMaskedTextBox;
         private Label TimeLabel;
         private CheckBox SaveCheckBox;
+        private Button ResetButton;
     }
 }
