@@ -101,6 +101,7 @@
             ResetButton.TabIndex = 3;
             ResetButton.Text = "Reset";
             ResetButton.UseVisualStyleBackColor = true;
+            ResetButton.Click += ResetButton_Click;
             // 
             // MainForm
             // 

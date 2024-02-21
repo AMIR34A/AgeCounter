@@ -66,5 +66,10 @@ namespace AgeCounter
             AgeCounterForm ageCounterForm = new AgeCounterForm(counterModel);
             ageCounterForm.ShowDialog();
         }
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
