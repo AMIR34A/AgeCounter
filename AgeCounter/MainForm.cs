@@ -28,7 +28,6 @@ namespace AgeCounter
 
         private async void StartButton_Click(object sender, EventArgs e)
         {
-
             int hour = int.Parse(TimeMaskedTextBox.Text.Split(':')[0]);
             int minute = int.Parse(TimeMaskedTextBox.Text.Split(':')[1]);
             DateTime dateTime = BirthDateTimePicker.Value;
@@ -67,9 +66,6 @@ namespace AgeCounter
             ageCounterForm.ShowDialog();
         }
 
-        private void ResetButton_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void ResetButton_Click(object sender, EventArgs e) => File.Delete(path);
     }
 }
