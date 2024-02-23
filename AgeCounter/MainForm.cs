@@ -66,6 +66,10 @@ namespace AgeCounter
             ageCounterForm.ShowDialog();
         }
 
-        private void ResetButton_Click(object sender, EventArgs e) => File.Delete(path);
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(path))
+                File.Delete(path);
+        }
     }
 }
