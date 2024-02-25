@@ -47,6 +47,7 @@ public partial class AgeCounterForm : Form
                 Counter.Year++;
             }
             AgeCounterLabel.Text = $"{(Counter.Year < 10 ? "0" + Counter.Year : Counter.Year)}:{(Counter.Day < 10 ? "0" + Counter.Day : Counter.Day)}:{(Counter.Hour < 10 ? "0" + Counter.Hour : Counter.Hour)}:{(Counter.Minute < 10 ? "0" + Counter.Minute : Counter.Minute)}:{(Counter.Second < 10 ? "0" + Counter.Second : Counter.Second)}";
+            ProgressBar.Value = (Counter.Year * 365) + Counter.Day;
         });
     }
 
