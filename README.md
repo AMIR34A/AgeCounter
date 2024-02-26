@@ -22,7 +22,7 @@ The Age Calculator is a simple Windows desktop application designed to calculate
 3. Your age will be displayed in the designated form.
 
 ## Screenshots
-![Age Counter Screenshot](screenshots/screenshot.png)
+![Age Counter Screenshot](UI/screenshot.png)
 
 ## 💢How to Run Automatically
 1. Press Win key + R.
