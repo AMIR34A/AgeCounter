@@ -26,5 +26,5 @@ The Age Calculator is a simple Windows desktop application designed to calculate
 
 ## 💢How to Run Automatically
 1. Press Win key + R.
-2. Type shell:startup and press OK.
+2. Type shell:startup then click OK button.
 3. Copy the .exe file of Age Counter in the directory.
