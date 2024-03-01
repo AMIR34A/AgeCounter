@@ -67,7 +67,7 @@ public partial class AgeCounterForm : Form
         NotifyIcon.Icon = new Icon(path);
         NotifyIcon.BalloonTipTitle = "Age Counter";
         NotifyIcon.BalloonTipText = "The app was hid";
-        NotifyIcon.BalloonTipIcon = ToolTipIcon.Info;
+        NotifyIcon.BalloonTipIcon = ToolTipIcon.None;
         NotifyIcon.ShowBalloonTip(1000);
     }
 
