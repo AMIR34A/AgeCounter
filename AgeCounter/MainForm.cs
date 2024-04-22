@@ -13,17 +13,7 @@ namespace AgeCounter
         {
             InitializeComponent();
             Form = this;
-            if (File.Exists(path))
-            {
-                string[] text = File.ReadAllText(path).Split(':');
-                int year = int.Parse(text[0]);
-                int month = int.Parse(text[1]);
-                int day = int.Parse(text[2]);
-                int hour = int.Parse(text[3]);
-                int minute = int.Parse(text[4]);
-                DateTime birthDate = new DateTime(year, month, day, hour, minute, 0);
-                ShowCounter(birthDate);
-            }
+            ShowCounter(LoadBirthDate());
         }
 
         private async void StartButton_Click(object sender, EventArgs e)
@@ -69,6 +59,21 @@ namespace AgeCounter
         {
             if (File.Exists(path))
                 File.Delete(path);
+        }
+        private DateTime LoadBirthDate()
+        {
+            if (File.Exists(path))
+            {
+                string[] text = File.ReadAllText(path).Split(':');
+                int year = int.Parse(text[0]);
+                int month = int.Parse(text[1]);
+                int day = int.Parse(text[2]);
+                int hour = int.Parse(text[3]);
+                int minute = int.Parse(text[4]);
+                DateTime birthDate = new DateTime(year, month, day, hour, minute, 0);
+                return birthDate;
+            }
+            return DateTime.Now;
         }
     }
 }
