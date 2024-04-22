@@ -60,6 +60,14 @@ namespace AgeCounter
             if (File.Exists(path))
                 File.Delete(path);
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            DateTime birthDate = LoadBirthDate();
+            BirthDateTimePicker.Value = birthDate;
+            TimeMaskedTextBox.Text = string.Format("{0:00}:{1:00}", birthDate.Hour, birthDate.Minute);
+        }
+
         private DateTime LoadBirthDate()
         {
             if (File.Exists(path))

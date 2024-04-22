@@ -120,6 +120,7 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Main Form";
+            Load += MainForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
