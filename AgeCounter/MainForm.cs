@@ -35,9 +35,8 @@ namespace AgeCounter
 
             if (SaveCheckBox.Checked)
             {
-                var file = File.Open(path, FileMode.OpenOrCreate, FileAccess.Write);
+                using var file = File.Open(path, FileMode.OpenOrCreate, FileAccess.Write);
                 await file.WriteAsync(UTF8Encoding.UTF8.GetBytes($"{birthDate.Year}:{birthDate.Month}:{birthDate.Day}:{birthDate.Hour}:{birthDate.Minute}"));
-                file.Close();
             }
 
             ShowCounter(birthDate);
