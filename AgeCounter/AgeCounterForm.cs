@@ -66,7 +66,7 @@ public partial class AgeCounterForm : Form
         var path = Application.StartupPath + "\\Icons\\noun-hourglass-527930.ico";
         NotifyIcon.Icon = new Icon(path);
         NotifyIcon.BalloonTipTitle = "Age Counter";
-        NotifyIcon.BalloonTipText = "The app was hid";
+        NotifyIcon.BalloonTipText = "The app was hidden";
         NotifyIcon.BalloonTipIcon = ToolTipIcon.None;
         NotifyIcon.ShowBalloonTip(1000);
     }
